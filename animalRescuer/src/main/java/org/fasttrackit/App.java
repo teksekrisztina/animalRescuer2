@@ -7,37 +7,71 @@ import java.time.LocalDateTime;
  */
 public class App {
     public static void main(String[] args) {
-        Animal dog = new Animal();
-        dog.name = "Ion";
-        dog.age = 2.6;
-        dog.health = 10;
-        dog.hungerLevel = 7;
-        dog.wellBeing = 8;
-        dog.favoriteFood = "canned beef";
-        dog.favoriteRecreationalActivity = "walking";
+        Dog  dog = new Dog();
+
+        dog.setName("Ion") ;
+
+        dog.setAge(2.6) ;
+
+
+        dog.setHealth(10) ;
+
+
+        dog.setHungerLevel(7) ;
+
+
+        dog.setWellBeing(8) ;
+
+
+        dog.setFavoriteFood("canned beef") ;
+
+
+        dog.setFavoriteRecreationalActivity("walking") ;
+
+        dog.setFurType("long") ;
+
+
 
         Owner owner = new Owner();
-        owner.name = "Krisztina";
-        owner.moneyAmount = 5.5;
 
-        PetFood petFood = new PetFood("beef");
+        owner.setName("Krisztina") ;
 
-        petFood.price = 3.4;
-        petFood.quantity = 3;
-        petFood.expiryDate = LocalDateTime.now().minusMonths(2);
-        petFood.available = true;
+
+        owner.setMoneyAmount(5.5) ;
+
+        CannedFood petFood= new CannedFood("beef") ;
+petFood.setPrice(3.4) ;
+
+
+        petFood.setQuantity(3) ;
+
+        LocalDateTime expiryDate = LocalDateTime.now().minusMonths(2);
+        petFood.setExpiryDate( expiryDate ) ;
+
+        petFood.setAvailable(true) ;
+
+        petFood.setCanSize(2) ;
+
 
         RecreationalActivity recreationalActivity = new RecreationalActivity("walking");
-
+recreationalActivity.setName("walking") ;
 
         Vet vet = new Vet();
-        vet.name = "Ziad";
-        vet.specialization = "small animals";
+
+        vet.setName("Ziad") ;
+
+
+        vet.setSpecialization("small animals") ;
 
         Game game = new Game();
-        game.animal = dog;
-        game.owner = owner;
-        game.vet = vet;
+
+        game.setAnimal(dog) ;
+
+
+        game.setOwner(owner) ;
+
+
+        game.setVet(vet);
 
 
     }
