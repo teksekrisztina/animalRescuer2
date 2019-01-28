@@ -20,15 +20,15 @@ public class App {
         owner.name = "Krisztina";
         owner.moneyAmount = 5.5;
 
-        PetFood petFood = new PetFood();
-        petFood.name = "beef";
+        PetFood petFood = new PetFood("beef");
+
         petFood.price = 3.4;
         petFood.quantity = 3;
         petFood.expiryDate = LocalDateTime.now().minusMonths(2);
         petFood.available = true;
 
-        RecreationalActivity recreationalActivity = new RecreationalActivity();
-        recreationalActivity.name = "walking";
+        RecreationalActivity recreationalActivity = new RecreationalActivity("walking");
+
 
         Vet vet = new Vet();
         vet.name = "Ziad";

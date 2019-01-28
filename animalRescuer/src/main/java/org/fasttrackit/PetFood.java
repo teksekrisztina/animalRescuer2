@@ -9,4 +9,8 @@ public class PetFood {
     LocalDateTime expiryDate;
     boolean available;
 
+
+    public PetFood(String name) {
+        this.name = name;
+    }
 }
