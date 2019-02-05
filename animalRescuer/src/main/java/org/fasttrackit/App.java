@@ -7,72 +7,74 @@ import java.time.LocalDateTime;
  */
 public class App {
     public static void main(String[] args) {
-        Dog  dog = new Dog();
+        Dog dog = new Dog();
 
-        dog.setName("Ion") ;
+        dog.setName("Ion");
 
-        dog.setAge(2.6) ;
-
-
-        dog.setHealth(10) ;
+        dog.setAge(2.6);
 
 
-        dog.setHungerLevel(7) ;
+        dog.setHealth(10);
 
 
-        dog.setWellBeing(8) ;
+        dog.setHungerLevel(7);
 
 
-        dog.setFavoriteFood("canned beef") ;
+        dog.setWellBeing(8);
 
 
-        dog.setFavoriteRecreationalActivity("walking") ;
+        dog.setFavoriteFood("canned beef");
 
-        dog.setFurType("long") ;
 
+        dog.setFavoriteRecreationalActivity("walking");
+
+        dog.setFurType("long");
 
 
         Owner owner = new Owner();
 
-        owner.setName("Krisztina") ;
+        owner.setName("Krisztina");
 
 
-        owner.setMoneyAmount(5.5) ;
+        owner.setMoneyAmount(5.5);
 
-        CannedFood petFood= new CannedFood("beef") ;
-petFood.setPrice(3.4) ;
+        CannedFood petFood = new CannedFood("beef");
+        petFood.setPrice(3.4);
 
 
-        petFood.setQuantity(3) ;
+        petFood.setQuantity(3);
 
         LocalDateTime expiryDate = LocalDateTime.now().minusMonths(2);
-        petFood.setExpiryDate( expiryDate ) ;
+        petFood.setExpiryDate(expiryDate);
 
-        petFood.setAvailable(true) ;
+        petFood.setAvailable(true);
 
-        petFood.setCanSize(2) ;
+        petFood.setCanSize(2);
 
 
         RecreationalActivity recreationalActivity = new RecreationalActivity("walking");
-recreationalActivity.setName("walking") ;
+        recreationalActivity.setName("walking");
 
         Vet vet = new Vet();
 
-        vet.setName("Ziad") ;
+        vet.setName("Ziad");
 
 
-        vet.setSpecialization("small animals") ;
+        vet.setSpecialization("small animals");
 
         Game game = new Game();
 
-        game.setAnimal(dog) ;
+        game.setAnimal(dog);
 
 
-        game.setOwner(owner) ;
+        game.setOwner(owner);
 
 
         game.setVet(vet);
 
-
+        owner.feed(dog, petFood);
+        owner.play(dog, recreationalActivity);
     }
+
+
 }

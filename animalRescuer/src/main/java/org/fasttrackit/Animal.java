@@ -64,4 +64,6 @@ public class Animal {
     public void setFavoriteRecreationalActivity(String favoriteRecreationalActivity) {
         this.favoriteRecreationalActivity = favoriteRecreationalActivity;
     }
+
+
 }

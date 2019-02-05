@@ -19,4 +19,20 @@ public class Owner {
     public void setMoneyAmount(double moneyAmount) {
         this.moneyAmount = moneyAmount;
     }
+
+    public void  feed(Animal animal , PetFood petfood  ){
+
+        System.out.println( name +  " just gave some " +  petfood.getName() + " to " +  animal.getName() );
+
+
+    }
+
+    public void play(Animal animal, RecreationalActivity recreationalActivity ){
+
+        System.out.println( name + " plays with "  + animal.getName() +  " ball game " + recreationalActivity.getName() );
+
+
+
+    }
+
 }
